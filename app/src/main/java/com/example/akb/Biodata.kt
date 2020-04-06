@@ -19,7 +19,7 @@ class Biodata : AppCompatActivity() {
                 editText2.setError("Nama tidak boleh Kosong")
             }
             else{
-                val intent = Intent(this,Biodata::class.java)
+                val intent = Intent(this,Terakhir::class.java)
                     .putExtra(EXTRA_MESSAGE,nama)
                 startActivity(intent)
             }

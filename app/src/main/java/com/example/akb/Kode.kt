@@ -14,7 +14,7 @@ class Kode : AppCompatActivity() {
         val btnOpenActivity2 : Button = findViewById(R.id.button)
         btnOpenActivity2.setOnClickListener {
 
-            val intent = Intent(this, MainActivity :: class.java)
+            val intent = Intent(this, Biodata :: class.java)
             startActivity(intent)
         }
     }

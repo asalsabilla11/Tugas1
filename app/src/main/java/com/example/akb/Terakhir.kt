@@ -1,5 +1,6 @@
 package com.example.akb
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
@@ -14,9 +15,15 @@ class Terakhir : AppCompatActivity() {
 
         val nama = intent.getStringExtra(EXTRA_MESSAGE)
         textView9.setText(
-            "Beres! Sekarang "+nama+" udah bisa ngecek pengguna HP mu tiap hari buat " +
+            "Beres! Sekarang "+nama+" udah bisa ngecek penggunaan HP mu tiap hari buat " +
                     "bantu kamu ngatur waktu :)"
 
         )
+
+        button4.setOnClickListener(){
+            val intent = Intent(this,MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            startActivity(intent)
+        }
     }
 }

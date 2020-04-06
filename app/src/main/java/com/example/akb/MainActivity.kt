@@ -18,8 +18,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_mulai.setOnClickListener(){ it: View!
-            val intent = intent(this,Kode::class.java)
+        btn_mulai.setOnClickListener(){
+            val intent = Intent(this,Kode::class.java)
+            startActivity(intent)
         }
     }
 }
